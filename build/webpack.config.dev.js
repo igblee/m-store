@@ -8,7 +8,11 @@ const config = merge(base, {
   output: {
     libraryTarget: 'umd',
     path: path.join(__dirname, '..', 'dist'),
-    filename: 'store.js'
+    filename: (chunkData) => {
+      console.log('TCL: chunkData', chunkData)
+      const service = 'jarvis'
+      return `[name].${service}.js`
+    }
   },
   devtool: 'cheap-module-eval-source-map'
 })

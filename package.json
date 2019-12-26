@@ -1,15 +1,14 @@
 {
   "name": "@glennlee/m-store",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "description": "simple store lib",
-  "main": "dist/store.commonjs2.js",
+  "main": "dist/main.js",
   "module": "dist/store.esm.js",
   "unpkg": "dist/store.umd.js",
-  "jsdelivr": "dist/store.umd.js",
-  "types": "src/types/index.d.ts",
+  "jsdelivr": "dist/store.umm.js",
+  "types": "dist/main.d.ts",
   "files": [
-    "dist",
-    "types/index.d.ts"
+    "dist"
   ],
   "scripts": {
     "serve": "webpack --config build/webpack.config.dev.js",
@@ -48,6 +47,7 @@
     "eslint-plugin-standard": "^4.0.1",
     "standard": "^14.3.1",
     "ts-loader": "^6.2.1",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
     "tslint": "^5.20.1",
     "tslint-loader": "^3.5.4",
     "typescript": "^3.7.2",
@@ -55,5 +55,8 @@
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0",
     "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@glennlee/m-store": "^0.0.5"
   }
 }

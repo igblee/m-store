@@ -1,4 +1,7 @@
 import { IState, IMutation, IAction, IStore, TMutation, TAction } from '@/types/type'
+import MStore from '@glennlee/m-store'
+console.log('TCL: MStore', MStore)
+
 class Store {
   public state: IState = null
   private mutations: IMutation = null

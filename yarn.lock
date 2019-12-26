@@ -716,6 +716,18 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@glennlee/m-store@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@glennlee/m-store/-/m-store-0.0.4.tgz#baf6f7ac42186f4b61e365c712c427dadc8795f1"
+  integrity sha512-Nn16EAdbUKOzSnF1Q6uTvrbpOsR/SaP6RwioeamukkCFMIlb+x8c2ng7vwo0C40V+GWgZB4AZ4YL1q5IIDYc5Q==
+
+"@glennlee/m-store@^0.0.5":
+  version "0.0.5"
+  resolved "https://registry.npmjs.org/@glennlee/m-store/-/m-store-0.0.5.tgz#f4d9b038f8f1612fb6e6dda88cd253e41b896620"
+  integrity sha512-lFarx1++/Ai6xMzxmlvT7CPOIFBx3wwpOKacrXADJerLS8DVGSOJI4VVvWTLHDvbY9wWPZKGfDqs0RPN5RCB+g==
+  dependencies:
+    "@glennlee/m-store" "^0.0.4"
+
 "@types/body-parser@*":
   version "1.17.1"
   resolved "https://registry.npmjs.org/@types/body-parser/-/body-parser-1.17.1.tgz#18fcf61768fb5c30ccc508c21d6fd2e8b3bf7897"

@@ -1,7 +1,8 @@
 const path = require('path')
 const merge = require('webpack-merge')
 const base = require('./webpack.base')
-
+const fs = require('fs')
+fs.copyFileSync(path.resolve(__dirname, '..', 'src/types', 'type.d.ts'), path.resolve(__dirname, '..', 'dist', 'main.d.ts'))
 module.exports = [
   merge(base, {
     output: {

@@ -11,12 +11,26 @@
     "emitDecoratorMetadata": true,
     "allowSyntheticDefaultImports": true,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     },
     "esModuleInterop": true,
-    "types": ["node"],
-    "typeRoots": ["node_modules/@types/", "src/types"]
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "node_modules/@types/",
+      "src/types",
+      "node_modules/@glennlee/m-store/dist/"
+    ]
   },
-  "include": ["/*.ts", "src/**/*.ts", "src/test/**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": [
+    "/*.ts",
+    "src/**/*.ts",
+    "src/test/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
