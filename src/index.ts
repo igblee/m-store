@@ -1,14 +1,12 @@
-import { IState, IMutation, IAction, IStore, TMutation, TAction } from '@/types/type'
-import MStore from '@glennlee/m-store'
-console.log('TCL: MStore', MStore)
+import { IState, IMutation, IAction, MStore, IStoreMeta, TMutation, TAction } from '@/types/type'
 
-class Store {
-  public state: IState = null
-  private mutations: IMutation = null
-  private actions: IAction = null
+class Store implements MStore {
+  public state: IState = Object.create(null)
+  private mutations: IMutation = Object.create(null)
+  private actions: IAction = Object.create(null)
   private mutationSubscribers: any[] = null
   private actionSubscribers: any[] = null
-  constructor ({ state, mutations, actions }: IStore) {
+  constructor ({ state, mutations, actions }: IStoreMeta) {
     this.state = state
     Object.keys(mutations).forEach((key) => {
       if (Object.prototype.toString.call(mutations[key]) === '[object Array]') {
@@ -124,5 +122,4 @@ function genericSubscribe (fn: any, subs: any[]): () => void {
     }
   }
 }
-export default Store
 module.exports = Store

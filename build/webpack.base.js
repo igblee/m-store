@@ -1,5 +1,11 @@
 const path = require('path')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const shelljs = require('shelljs')
+
+const distPath = path.resolve(__dirname, '..', 'dist')
+shelljs.exec(`rm -rf ${distPath}`)
+shelljs.exec(`mkdir ${distPath}`)
+
 module.exports = {
   entry: path.join(__dirname, 'src', 'index.ts'),
   module: {
